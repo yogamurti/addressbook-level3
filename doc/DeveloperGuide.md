@@ -42,12 +42,12 @@ Priorities: High (must have) - `* * *`, Medium (nice to have)  - `* *`,  Low (un
 Priority | As a ... | I want to ... | So that I can...
 -------- | :-------- | :--------- | :-----------
 `* * *` | new user | see usage instructions | refer to instructions when I forget how to use the App
-`* * *` | user | show my addressbook | view all the current entries my addressbook
+`* * *` | user | show my addressbook | view all the current entries in my addressbook
 `* * *` | user | add a new person |
 `* * *` | user | delete a person | remove entries that I no longer need
 `* * *` | user | edit a person | edit a person's particulars if he/she changes his/her contact details
 `* * *` | user | find a person by name | locate details of persons without having to go through the entire list
-`* *` | user | undo my last operation | conviniently undo mistakes I have made
+`* *` | user | undo my last operation | conveniently undo recent mistakes that I have made
 `* *` | user | hide [private contact details](#private-contact-detail) by default | minimize chance of someone else seeing them by accident
 `*` | user | rename tags that I have made | more accurately group my contacts
 `*` | user with many persons in the address book | sort persons by name | locate a person easily
