@@ -42,10 +42,14 @@ Priorities: High (must have) - `* * *`, Medium (nice to have)  - `* *`,  Low (un
 Priority | As a ... | I want to ... | So that I can...
 -------- | :-------- | :--------- | :-----------
 `* * *` | new user | see usage instructions | refer to instructions when I forget how to use the App
+`* * *` | user | show my addressbook | view all the current entries my addressbook
 `* * *` | user | add a new person |
 `* * *` | user | delete a person | remove entries that I no longer need
+`* * *` | user | edit a person | edit a person's particulars if he/she changes his/her contact details
 `* * *` | user | find a person by name | locate details of persons without having to go through the entire list
+`* *` | user | undo my last operation | conviniently undo mistakes I have made
 `* *` | user | hide [private contact details](#private-contact-detail) by default | minimize chance of someone else seeing them by accident
+`*` | user | rename tags that I have made | more accurately group my contacts
 `*` | user with many persons in the address book | sort persons by name | locate a person easily
 
 
@@ -74,12 +78,42 @@ Use case ends.
 > 3a1. AddressBook shows an error message <br>
   Use case resumes at step 2
 
+#### Use case: Rename tag
+
+**MSS**
+
+1. User requests to rename a tag
+2. AddressBook displays the details of contacts who have the tag
+3. AddressBook requests confirmation for the renaming operation with the user
+4. User confirms the renaming operation
+5. AddressBook renames the tag <br>
+Use case ends.
+
+**Extensions**
+
+1a. New tag name already exists in the AddressBook
+
+> Addressbook shows a warning message
+  Addressbook shows the details of contacts who already have that tag <br>
+  Use case resumes at step 2
+
+2a. No contacts affected (tag (to be renamed) does not exist in AddressBook)
+
+> AddressBook shows an error message <br>
+  Use case ends
+
+4a. User does not confirm the renaming operation
+> Use case ends
+
 ## Appendix C : Non Functional Requirements
 
 1. Should work on any [mainstream OS](#mainstream-os) as long as it has Java 8 or higher installed.
 2. Should be able to hold up to 1000 persons.
 3. Should come with automated unit tests and open source code.
 4. Should favor DOS style commands over Unix-style commands.
+5. Should not require more than 5 seconds to respond to a user request.
+6. Should store the AddressBook details in a permanent location in the OS.
+7. Should not take up significant system resources to run.
 
 ## Appendix D : Glossary
 
